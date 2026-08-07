@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="sharedpref" path="."/>
+        <include domain="file" path="."/>
+        <exclude domain="file" path="jdk/"/>
+        <exclude domain="file" path="openrocket/"/>
+        <exclude domain="file" path="apps/"/>
+        <exclude domain="file" path="workspace/"/>
+    </cloud-backup>
+    <device-transfer>
+        <include domain="sharedpref" path="."/>
+        <include domain="file" path="."/>
+        <exclude domain="file" path="jdk/"/>
+        <exclude domain="file" path="openrocket/"/>
+        <exclude domain="file" path="apps/"/>
+        <exclude domain="file" path="workspace/"/>
+    </device-transfer>
+</data-extraction-rules>

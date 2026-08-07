@@ -1,0 +1,44 @@
+# Gradle
+.gradle/
+build/
+app/build/
+app/.cxx/
+app/release/
+app/debug/
+
+# Local properties
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keystore
+*.jks
+*.keystore
+
+# Google Services
+google-services.json
+
+# NDK build artifacts in source dirs (keep .c/.h files)
+*.o
+*.obj
+
+# Log files
+*.log
+
+# APK and bundles
+*.apk
+*.aab
+*.ap_
+*.dex

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Rocket body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,22 L58,32 L58,62 L54,70 L50,62 L50,32 Z" />
+    <!-- Rocket nose -->
+    <path
+        android:fillColor="#FF6F00"
+        android:pathData="M54,14 L60,28 L48,28 Z" />
+    <!-- Left fin -->
+    <path
+        android:fillColor="#FF6F00"
+        android:pathData="M50,58 L42,72 L50,68 Z" />
+    <!-- Right fin -->
+    <path
+        android:fillColor="#FF6F00"
+        android:pathData="M58,58 L66,72 L58,68 Z" />
+    <!-- Window -->
+    <path
+        android:fillColor="#42A5F5"
+        android:pathData="M54,36 A4,4 0 1,1 54,44 A4,4 0 1,1 54,36" />
+    <!-- Flame -->
+    <path
+        android:fillColor="#FF3D00"
+        android:pathData="M52,70 L54,82 L56,70 Z" />
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M53,70 L54,78 L55,70 Z" />
+    <!-- Stars -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,20 L21,23 L24,24 L21,25 L20,28 L19,25 L16,24 L19,23 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M84,18 L85,20 L87,21 L85,22 L84,24 L83,22 L81,21 L83,20 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M78,42 L79,44 L81,45 L79,46 L78,48 L77,46 L75,45 L77,44 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M26,48 L27,50 L29,51 L27,52 L26,54 L25,52 L23,51 L25,50 Z" />
+</vector>
