@@ -110,7 +110,8 @@ class DownloadManager private constructor(context: Context) {
                 var read: Int
 
                 try {
-                    while (input.read(buffer).also { read = it } != -1) {
+                    try {
+                while (input.read(buffer).also { read = it } != -1) {
                         if (activeDownloads[key] != true) {
                             stateFlow.value = DownloadState.Cancelled
                             return@withContext Result.failure(IOException("Download cancelled"))
@@ -125,6 +126,9 @@ class DownloadManager private constructor(context: Context) {
                             -1f
                         }
                         stateFlow.value = DownloadState.Downloading(progress, bytesDownloaded, totalBytes)
+                }
+            } finally {
+                output.close()
                     }
                 } finally {
                     output.close()

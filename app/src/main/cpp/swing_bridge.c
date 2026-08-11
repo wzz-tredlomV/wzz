@@ -130,6 +130,10 @@ Java_com_openrocket_launcher_engine_SwingBridge_nativeDestroy(JNIEnv* env, jobje
         (*env)->DeleteGlobalRef(env, g_canvasClass);
         g_canvasClass = NULL;
     }
+    if (g_canvasClass != NULL) {
+        (*env)->DeleteGlobalRef(env, g_canvasClass);
+        g_canvasClass = NULL;
+    }
     if (g_canvas != NULL) {
         (*env)->DeleteGlobalRef(env, g_canvas);
         g_canvas = NULL;

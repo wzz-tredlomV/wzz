@@ -363,6 +363,7 @@ class JarExecutor private constructor(context: Context) {
                     line?.let {
                         appendLog(it + "\n")
                         _lastOutput.value = ProcessOutput(stdout = it, timestamp = System.currentTimeMillis())
+                        _lastOutput.value = ProcessOutput(stdout = it, timestamp = System.currentTimeMillis())
                         Timber.v(it)
                     }
                 }

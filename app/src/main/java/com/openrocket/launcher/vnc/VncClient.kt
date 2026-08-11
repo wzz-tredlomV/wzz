@@ -42,7 +42,7 @@ class VncClient {
             if (nativeHandle == 0L) {
                 Timber.e("Failed to initialize VNC client")
                 return false
-        }
+    }
             Timber.i("VNC client connected to $host:$port")
             true
     } catch (e: Exception) {

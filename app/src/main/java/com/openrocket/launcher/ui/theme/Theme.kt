@@ -80,7 +80,9 @@ fun OpenRocketTheme(
             val window = (view.context as Activity).window
             window.statusBarColor = colorScheme.primary.toArgb()
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
+            }
             }
         }
     }

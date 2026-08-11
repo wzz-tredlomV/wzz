@@ -16,6 +16,8 @@ android {
 
         ndkVersion = "25.2.9519653"
 
+        ndkVersion = "25.2.9519653"
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
