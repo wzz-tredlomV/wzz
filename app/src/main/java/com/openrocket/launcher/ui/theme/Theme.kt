@@ -81,7 +81,9 @@ fun OpenRocketTheme(
             window.statusBarColor = colorScheme.primary.toArgb()
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
+            }
             }
             }
         }

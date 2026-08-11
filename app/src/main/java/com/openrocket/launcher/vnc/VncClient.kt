@@ -1,8 +1,6 @@
 package com.openrocket.launcher.vnc
 
 import android.view.Surface
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import timber.log.Timber
 import java.io.IOException
 
@@ -29,7 +27,7 @@ class VncClient {
     }
 
     /**
-     * Connect to VNC server
+     * Connect to VNC server (call from IO dispatcher)
      *
      * @param host VNC server host (usually "127.0.0.1" for localhost)
      * @param port VNC server port (default 5900 + display number)
@@ -37,18 +35,19 @@ class VncClient {
      * @return true if connection successful
      */
     fun connect(host: String, port: Int, surface: Surface): Boolean {
-        try {
+        return try {
             nativeHandle = nativeInit(host, port, surface)
             if (nativeHandle == 0L) {
                 Timber.e("Failed to initialize VNC client")
-                return false
-    }
-            Timber.i("VNC client connected to $host:$port")
-            true
-    } catch (e: Exception) {
+                false
+            } else {
+                Timber.i("VNC client connected to $host:$port")
+                true
+            }
+        } catch (e: Exception) {
             Timber.e(e, "VNC connection failed")
             false
-    }
+        }
     }
 
     /**
@@ -83,7 +82,7 @@ class VncClient {
             nativeDestroy(nativeHandle)
             nativeHandle = 0
             Timber.i("VNC client disconnected")
-    }
+        }
     }
 
     // Native methods

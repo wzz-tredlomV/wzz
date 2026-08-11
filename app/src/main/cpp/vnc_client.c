@@ -192,6 +192,7 @@ Java_com_openrocket_launcher_vnc_VncClient_nativeInit(
     VncClient* client = calloc(1, sizeof(VncClient));
     client->socket_fd = -1;
     client->socket_fd = -1;
+    client->socket_fd = -1;
     if (!client) {
         LOGE("Failed to allocate VncClient");
         (*env)->ReleaseStringUTFChars(env, host, chost);

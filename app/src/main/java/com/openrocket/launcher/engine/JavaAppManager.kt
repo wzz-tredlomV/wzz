@@ -141,7 +141,8 @@ class JavaAppManager(private val context: Context) {
         try {
             _setupState.value = JavaAppSetupState.DownloadingApp(0f, appName)
 
-            val appDir = File(appsDir, appName.replace(Regex("[^a-zA-Z0-9_-]"), "_"))
+            val safeName = appName.replace(Regex("[^a-zA-Z0-9_-]"), "_")
+            val appDir = File(appsDir, safeName)
             appDir.mkdirs()
 
             val jarFile = File(appDir, "$safeName.jar")
