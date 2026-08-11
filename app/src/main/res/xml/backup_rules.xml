@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <include domain="sharedpref" path="."/>
+    <include domain="file" path="."/>
+    <exclude domain="file" path="jdk/"/>
+    <exclude domain="file" path="openrocket/"/>
+    <exclude domain="file" path="apps/"/>
+    <exclude domain="file" path="workspace/"/>
+</full-backup-content>

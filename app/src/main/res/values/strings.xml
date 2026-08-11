@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Java Launcher</string>
+    <string name="channel_name">Java App Service</string>
+    <string name="channel_description">Background service for running Java applications</string>
+    <string name="notification_title">Java Launcher</string>
+    <string name="notification_text">Java application is running</string>
+</resources>
